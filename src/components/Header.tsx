@@ -12,7 +12,7 @@ const sectionOrder = ["skills", "about", "experience", "projects", "education", 
 export function Header({ lang }: HeaderProps) {
   const t = content[lang] as any;
   const [activeSection, setActiveSection] = useState("top");
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const navItems = useMemo(() => {
     const labels = new Map<string, string>(t.navItems.map((item: any) => [item.href, item.label] as [string, string]));
@@ -26,7 +26,7 @@ export function Header({ lang }: HeaderProps) {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const initialDark = savedTheme === "dark";
+    const initialDark = savedTheme === null ? true : savedTheme === "dark";
 
     setIsDark(initialDark);
     document.documentElement.classList.toggle("dark", initialDark);
