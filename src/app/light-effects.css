@@ -1,7 +1,7 @@
 html:not(.dark) body::before,
 html:not(.dark) body::after {
-  content: "" !important;
-  display: block !important;
+  content: "";
+  display: block;
   pointer-events: none;
   position: fixed;
   inset: 0;
@@ -10,23 +10,23 @@ html:not(.dark) body::after {
 
 html:not(.dark) body::before {
   background:
-    linear-gradient(90deg, transparent 0%, rgba(15, 23, 42, 0.18) 48%, transparent 100%),
-    linear-gradient(180deg, transparent 0%, rgba(2, 132, 199, 0.14) 52%, transparent 100%);
+    linear-gradient(90deg, transparent 0%, rgba(15, 23, 42, 0.42) 48%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.32) 52%, transparent 100%);
   background-size: 46rem 2px, 2px 42rem;
   background-position: -46rem 22%, 68% -42rem;
   mix-blend-mode: multiply;
-  opacity: 0.42 !important;
-  filter: drop-shadow(0 0 8px rgba(15, 23, 42, 0.14));
+  opacity: 0.62;
+  filter: drop-shadow(0 0 8px rgba(15, 23, 42, 0.22));
   animation: circuit-scan 8s linear infinite;
 }
 
 html:not(.dark) body::after {
   background:
-    radial-gradient(circle at 16% 15%, rgba(15, 23, 42, 0.16), transparent 14rem),
-    radial-gradient(circle at 88% 12%, rgba(2, 132, 199, 0.14), transparent 14rem),
-    radial-gradient(circle at 72% 64%, rgba(15, 23, 42, 0.13), transparent 18rem),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.14));
+    radial-gradient(circle at 16% 15%, rgba(15, 23, 42, 0.28), transparent 14rem),
+    radial-gradient(circle at 88% 12%, rgba(15, 23, 42, 0.22), transparent 14rem),
+    radial-gradient(circle at 72% 64%, rgba(15, 23, 42, 0.24), transparent 18rem),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.18));
   mix-blend-mode: multiply;
-  opacity: 0.62 !important;
+  opacity: 0.72;
   animation: circuit-glow 5s ease-in-out infinite;
 }
