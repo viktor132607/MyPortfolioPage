@@ -1,7 +1,7 @@
 html:not(.dark) body::before,
 html:not(.dark) body::after {
-  content: "";
-  display: block;
+  content: " " !important;
+  display: block !important;
   pointer-events: none;
   position: fixed;
   inset: 0;
@@ -15,7 +15,7 @@ html:not(.dark) body::before {
   background-size: 46rem 2px, 2px 42rem;
   background-position: -46rem 22%, 68% -42rem;
   mix-blend-mode: multiply;
-  opacity: 0.62;
+  opacity: 0.62 !important;
   filter: drop-shadow(0 0 8px rgba(15, 23, 42, 0.22));
   animation: circuit-scan 8s linear infinite;
 }
@@ -27,6 +27,6 @@ html:not(.dark) body::after {
     radial-gradient(circle at 72% 64%, rgba(15, 23, 42, 0.24), transparent 18rem),
     linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.18));
   mix-blend-mode: multiply;
-  opacity: 0.72;
+  opacity: 0.72 !important;
   animation: circuit-glow 5s ease-in-out infinite;
 }
