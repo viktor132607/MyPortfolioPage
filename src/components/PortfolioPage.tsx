@@ -48,11 +48,9 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
 
           <article className="card">
             <div className="space-y-6">
-              <div>
-                <p className="text-base leading-8 text-muted dark:text-white sm:text-lg">
-                  {t.sections.about.text}
-                </p>
-              </div>
+              <p className="text-base leading-8 text-muted dark:text-white sm:text-lg">
+                {t.sections.about.text}
+              </p>
 
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {t.aboutCards.map((card) => (
@@ -161,7 +159,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                         <strong className="text-ink dark:text-white">Key features:</strong>
                         <ul className="mt-2 grid gap-x-6 gap-y-1 md:grid-cols-2">
                           {project.features.map((feature) => (
-                            <li key={feature} className="list-disc ml-5">{feature}</li>
+                            <li key={feature} className="ml-5 list-disc">{feature}</li>
                           ))}
                         </ul>
                       </div>
@@ -211,6 +209,16 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                         >
                           Open live project
                         </a>
+                      </div>
+                    </div>
+                  ) : project.previewType === "locked" ? (
+                    <div className="flex h-[80vh] items-center justify-center border-t border-line bg-slate-950 px-6 text-center text-white">
+                      <div className="rounded-[2rem] border border-cyan-400/40 bg-white/10 px-8 py-10 shadow-soft backdrop-blur">
+                        <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-200">Locked preview</p>
+                        <p className="mt-4 text-3xl font-semibold tracking-[-0.04em]">Work in progress</p>
+                        <p className="mt-4 max-w-xl text-sm leading-7 text-cyan-50">
+                          This project preview is locked until the new version has its own live deployment, repository and UI screenshot.
+                        </p>
                       </div>
                     </div>
                   ) : hasScreenshot ? (
