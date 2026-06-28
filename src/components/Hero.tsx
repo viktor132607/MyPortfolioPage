@@ -169,7 +169,7 @@ export function Hero({ lang }: HeroProps) {
   return (
     <section id="top" className="section-shell pb-12 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20">
       <div className="grid gap-10 lg:grid-cols-[1fr_0.5fr] lg:items-stretch">
-        <div className="flex max-w-5xl flex-col justify-between">
+        <div className="max-w-5xl">
           <div>
             {profile.role ? <p className="kicker mb-5">{profile.role}</p> : null}
 
@@ -184,7 +184,7 @@ export function Hero({ lang }: HeroProps) {
             </div>
           </div>
 
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="#experience"
               className="rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-700 dark:border-cyan-400/50 dark:bg-cyan-500 dark:text-white dark:hover:bg-cyan-300"
