@@ -1,7 +1,7 @@
 export const profile = {
       name: "Viktor Iliev",
       role: "",
-      headline: "Viktor Iliev - Full Stack Developer.",
+      headline: "Viktor Iliev",
       summary:
         "Full Stack developer focused on ASP.NET Core Web APIs, backend logic, databases and practical full-stack web systems. I also work with Next.js, React and TypeScript on the frontend, while my finance, audit and accounting experience adds business context for clear data, workflows and reporting.",
       email: "iliev132607@gmail.com",
