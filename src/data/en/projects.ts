@@ -44,6 +44,31 @@ export const projects = [
   },
   {
     number: "03",
+    title: "HygiaTrade — WIP E-commerce Platform",
+    context:
+      "Status: WIP portfolio project. Full-stack e-commerce system for hygiene and cleaning products with separate frontend and backend archives.",
+    solution:
+      "WIP e-commerce platform demonstrating work on catalog flow, user flow, API architecture, authentication, data persistence and admin/business logic.",
+    features: [
+      "Product catalog and category structure",
+      "Product details pages",
+      "Shopping cart flow",
+      "Checkout process",
+      "Orders and order-related logic",
+      "User profile screens",
+      "Wishlist functionality",
+      "Admin-facing screens",
+      "JWT authentication and role-based access",
+      "ASP.NET Core Web API + PostgreSQL backend"
+    ],
+    stack: ["ASP.NET Core Web API", "Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "JWT", "Docker"],
+    previewType: "screenshot",
+    previewUrl: "",
+    previewImage: "/projects/hygiatrade-preview.png",
+    repositoryUrl: ""
+  },
+  {
+    number: "04",
     title: "PaladinHub 1.0 — Portfolio Project",
     context:
       "Status: Portfolio project. Community platform for the World of Warcraft Paladin audience, built as a .NET 8 MVC application with an account system, content modules and a Talent Tree Builder.",
@@ -79,7 +104,7 @@ export const projects = [
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
-    number: "04",
+    number: "05",
     title: "PaladinHub 2.0 — WIP Portfolio Project",
     context:
       "Status: WIP portfolio project. Planned modernization of PaladinHub into a separated ASP.NET Core Web API backend and standalone Next.js frontend.",
@@ -98,35 +123,10 @@ export const projects = [
       "Cleaner separation of concerns than the MVC version"
     ],
     stack: ["ASP.NET Core Web API", "Next.js", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "Docker", "Render"],
-    previewType: "screenshot",
+    previewType: "locked",
     previewUrl: "",
-    previewImage: "/projects/paladinhub-home.png",
+    previewImage: "",
     repositoryUrl: "",
-    sleepNotice: "WIP Web API + Next.js version. Live deployment and repository will be added later."
-  },
-  {
-    number: "05",
-    title: "HygiaTrade — WIP E-commerce Platform",
-    context:
-      "Status: WIP portfolio project. Full-stack e-commerce system for hygiene and cleaning products with separate frontend and backend archives.",
-    solution:
-      "WIP e-commerce platform demonstrating work on catalog flow, user flow, API architecture, authentication, data persistence and admin/business logic.",
-    features: [
-      "Product catalog and category structure",
-      "Product details pages",
-      "Shopping cart flow",
-      "Checkout process",
-      "Orders and order-related logic",
-      "User profile screens",
-      "Wishlist functionality",
-      "Admin-facing screens",
-      "JWT authentication and role-based access",
-      "ASP.NET Core Web API + PostgreSQL backend"
-    ],
-    stack: ["ASP.NET Core Web API", "Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "JWT", "Docker"],
-    previewType: "screenshot",
-    previewUrl: "",
-    previewImage: "/projects/hygiatrade-preview.png",
-    repositoryUrl: ""
+    sleepNotice: "WIP Web API + Next.js version. Preview locked until the project has its own UI screenshot, live deployment and repository."
   }
 ] as const;
