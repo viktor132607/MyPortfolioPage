@@ -1,10 +1,10 @@
 export const education = [
       {
         title: "Software University (SoftUni)",
-        period: "2024 – Present",
-        degree: "Software Development",
+        period: "2024 – 2026",
+        degree: "Software Development — Completed",
         text:
-          "Structured software development program focused on real-world skills, practical technologies, project-based learning and writing clean, maintainable code.",
+          "Completed structured software development program focused on real-world skills, practical technologies, project-based learning and writing clean, maintainable code.",
         details: [
           "Completed courses in Programming Fundamentals, Object-Oriented Programming, Databases and Web Development.",
           "Hands-on experience with C#, ASP.NET, HTML, CSS, JavaScript, databases and backend web application development.",
