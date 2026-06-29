@@ -71,7 +71,7 @@ body::before {
   );
   mix-blend-mode: screen;
   opacity: 0.62;
-  transform: translateX(-55vw) rotate(-45deg);
+  transform: translate(-55vw, -55vh) rotate(-45deg);
   transform-origin: center;
   animation: portfolio-wave-pass 10s linear infinite;
 }
@@ -95,11 +95,11 @@ body > * {
 
 @keyframes portfolio-wave-pass {
   0% {
-    transform: translateX(-55vw) rotate(-45deg);
+    transform: translate(-55vw, -55vh) rotate(-45deg);
   }
 
   100% {
-    transform: translateX(115vw) rotate(-45deg);
+    transform: translate(115vw, 55vh) rotate(-45deg);
   }
 }
 
