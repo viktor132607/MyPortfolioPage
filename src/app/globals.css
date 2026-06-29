@@ -55,12 +55,12 @@ body::before {
   content: "";
   pointer-events: none;
   position: fixed;
-  top: 0;
+  top: -55vh;
   left: 0;
   z-index: 0;
   width: 34vw;
   min-width: 360px;
-  height: 100vh;
+  height: 210vh;
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -71,7 +71,8 @@ body::before {
   );
   mix-blend-mode: screen;
   opacity: 0.62;
-  transform: translateX(-40vw);
+  transform: translateX(-55vw) rotate(-45deg);
+  transform-origin: center;
   animation: portfolio-wave-pass 10s linear infinite;
 }
 
@@ -94,11 +95,11 @@ body > * {
 
 @keyframes portfolio-wave-pass {
   0% {
-    transform: translateX(-40vw);
+    transform: translateX(-55vw) rotate(-45deg);
   }
 
   100% {
-    transform: translateX(110vw);
+    transform: translateX(115vw) rotate(-45deg);
   }
 }
 
