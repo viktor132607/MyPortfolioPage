@@ -1,6 +1,6 @@
 html:not(.dark) body::before,
 html:not(.dark) body::after {
-  content: " " !important;
+  content: "" !important;
   display: block !important;
   pointer-events: none;
   position: fixed;
@@ -10,23 +10,23 @@ html:not(.dark) body::after {
 
 html:not(.dark) body::before {
   background:
-    linear-gradient(90deg, transparent 0%, rgba(15, 23, 42, 0.42) 48%, transparent 100%),
-    linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.32) 52%, transparent 100%);
-  background-size: 46rem 2px, 2px 42rem;
-  background-position: -46rem 22%, 68% -42rem;
+    linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.34) 46%, rgba(125, 211, 252, 0.42) 50%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.18) 52%, transparent 100%);
+  background-size: 52rem 2px, 2px 46rem;
+  background-position: -52rem 24%, 72% -46rem;
   mix-blend-mode: multiply;
-  opacity: 0.62 !important;
-  filter: drop-shadow(0 0 8px rgba(15, 23, 42, 0.22));
-  animation: circuit-scan 8s linear infinite;
+  opacity: 0.58 !important;
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.22));
+  animation: circuit-scan 9s linear infinite;
 }
 
 html:not(.dark) body::after {
   background:
-    radial-gradient(circle at 16% 15%, rgba(15, 23, 42, 0.28), transparent 14rem),
-    radial-gradient(circle at 88% 12%, rgba(15, 23, 42, 0.22), transparent 14rem),
-    radial-gradient(circle at 72% 64%, rgba(15, 23, 42, 0.24), transparent 18rem),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.18));
+    radial-gradient(circle at 14% 16%, rgba(14, 165, 233, 0.22), transparent 15rem),
+    radial-gradient(circle at 86% 14%, rgba(99, 102, 241, 0.18), transparent 14rem),
+    radial-gradient(circle at 72% 66%, rgba(56, 189, 248, 0.2), transparent 20rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(14, 165, 233, 0.08));
   mix-blend-mode: multiply;
-  opacity: 0.72 !important;
-  animation: circuit-glow 5s ease-in-out infinite;
+  opacity: 0.68 !important;
+  animation: circuit-glow 6s ease-in-out infinite;
 }
