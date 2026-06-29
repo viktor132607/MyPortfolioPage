@@ -51,36 +51,40 @@ html.dark body {
     url("/circuit-board-bg.png") center top / cover fixed no-repeat;
 }
 
-body::before,
-body::after {
+body::before {
   content: "";
   pointer-events: none;
   position: fixed;
-  inset: 0;
+  top: -20vh;
+  left: 0;
   z-index: 0;
+  width: 42vw;
+  height: 140vh;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(34, 211, 238, 0.04) 18%,
+    rgba(34, 211, 238, 0.24) 48%,
+    rgba(168, 85, 247, 0.2) 58%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.46;
+  transform: translateX(-60vw) skewX(-12deg);
+  animation: portfolio-wave-pass 105s linear infinite;
 }
 
-body::before {
-  background:
-    linear-gradient(90deg, transparent 0%, rgba(0, 225, 255, 0.36) 48%, transparent 100%),
-    linear-gradient(180deg, transparent 0%, rgba(255, 0, 214, 0.26) 52%, transparent 100%);
-  background-size: 46rem 2px, 2px 42rem;
-  background-position: -46rem 22%, 68% -42rem;
-  mix-blend-mode: screen;
-  opacity: 0.5;
-  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.4));
-  animation: circuit-scan 8s linear infinite;
-}
-
-body::after {
-  background:
-    radial-gradient(circle at 16% 15%, rgba(255, 0, 184, 0.35), transparent 14rem),
-    radial-gradient(circle at 88% 12%, rgba(0, 213, 255, 0.28), transparent 14rem),
-    radial-gradient(circle at 72% 64%, rgba(0, 213, 255, 0.24), transparent 18rem),
-    linear-gradient(180deg, transparent, rgba(2, 6, 23, 0.18));
-  mix-blend-mode: screen;
-  opacity: 0.86;
-  animation: circuit-glow 5s ease-in-out infinite;
+html:not(.dark) body::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(14, 165, 233, 0.02) 18%,
+    rgba(14, 165, 233, 0.11) 50%,
+    rgba(125, 211, 252, 0.08) 58%,
+    transparent 100%
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.18;
 }
 
 body > * {
@@ -88,24 +92,13 @@ body > * {
   z-index: 1;
 }
 
-@keyframes circuit-scan {
+@keyframes portfolio-wave-pass {
   0% {
-    background-position: -46rem 22%, 68% -42rem;
+    transform: translateX(-60vw) skewX(-12deg);
   }
 
   100% {
-    background-position: 100vw 22%, 68% 100vh;
-  }
-}
-
-@keyframes circuit-glow {
-  0%,
-  100% {
-    opacity: 0.72;
-  }
-
-  50% {
-    opacity: 1;
+    transform: translateX(160vw) skewX(-12deg);
   }
 }
 
@@ -276,13 +269,6 @@ html:not(.dark) body {
   background: url("/light-theme-bg.png") center top / cover fixed no-repeat !important;
 }
 
-html:not(.dark) body::before,
-html:not(.dark) body::after {
-  display: none !important;
-  opacity: 0 !important;
-  background: none !important;
-}
-
 html:not(.dark) header {
   border-color: rgba(14, 116, 144, 0.28);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(236, 253, 255, 0.9), rgba(241, 245, 249, 0.92));
@@ -396,8 +382,7 @@ html:not(.dark) footer a {
   color: rgb(32, 46, 68) !important;
 }
 
-
-/* FINAL: light theme must use the actual white PCB image, without dark overlays. */
+/* FINAL: light theme must use the actual white PCB image. */
 html:not(.dark) body {
   background-image: url("/light-theme-bg.png") !important;
   background-color: #f8fbff !important;
@@ -405,10 +390,4 @@ html:not(.dark) body {
   background-position: center top !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
-}
-
-html:not(.dark) body::before,
-html:not(.dark) body::after {
-  content: none !important;
-  display: none !important;
 }
