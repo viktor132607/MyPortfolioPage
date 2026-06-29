@@ -55,36 +55,25 @@ body::before {
   content: "";
   pointer-events: none;
   position: fixed;
-  top: -20vh;
+  top: 0;
   left: 0;
   z-index: 0;
-  width: 42vw;
-  height: 140vh;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(34, 211, 238, 0.04) 18%,
-    rgba(34, 211, 238, 0.24) 48%,
-    rgba(168, 85, 247, 0.2) 58%,
-    transparent 100%
-  );
+  width: 220vw;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2200 180' preserveAspectRatio='none'%3E%3Cpath d='M0 90 C275 68 550 112 825 90 S1375 68 1650 90 S2062 112 2200 90' fill='none' stroke='%2322d3ee' stroke-width='28' stroke-linecap='round' opacity='0.42'/%3E%3Cpath d='M0 92 C275 70 550 114 825 92 S1375 70 1650 92 S2062 114 2200 92' fill='none' stroke='%23a855f7' stroke-width='18' stroke-linecap='round' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 48%;
+  background-size: 100% 180px;
   mix-blend-mode: screen;
-  opacity: 0.46;
-  transform: translateX(-60vw) skewX(-12deg);
-  animation: portfolio-wave-pass 105s linear infinite;
+  opacity: 0.72;
+  transform: translateX(-120vw);
+  animation: portfolio-wave-pass 10s linear infinite;
 }
 
 html:not(.dark) body::before {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(14, 165, 233, 0.02) 18%,
-    rgba(14, 165, 233, 0.11) 50%,
-    rgba(125, 211, 252, 0.08) 58%,
-    transparent 100%
-  );
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2200 180' preserveAspectRatio='none'%3E%3Cpath d='M0 90 C275 72 550 108 825 90 S1375 72 1650 90 S2062 108 2200 90' fill='none' stroke='%230ea5e9' stroke-width='22' stroke-linecap='round' opacity='0.20'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
-  opacity: 0.18;
+  opacity: 0.5;
 }
 
 body > * {
@@ -94,11 +83,11 @@ body > * {
 
 @keyframes portfolio-wave-pass {
   0% {
-    transform: translateX(-60vw) skewX(-12deg);
+    transform: translateX(-120vw);
   }
 
   100% {
-    transform: translateX(160vw) skewX(-12deg);
+    transform: translateX(100vw);
   }
 }
 
