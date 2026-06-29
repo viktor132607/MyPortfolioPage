@@ -1,5 +1,1 @@
-html:not(.dark) body::before,
-html:not(.dark) body::after{content:""!important;display:block!important;pointer-events:none;position:fixed;inset:0;z-index:0}
-html:not(.dark) body::before{background:linear-gradient(90deg,transparent 0%,transparent 35%,rgba(14,165,233,.08) 47%,rgba(125,211,252,.14) 50%,rgba(14,165,233,.08) 53%,transparent 65%,transparent 100%);background-size:100vw 100%;background-position:-120vw 0;mix-blend-mode:multiply;opacity:.28!important;filter:blur(1px);animation:light-wave-pass 60s linear infinite}
-html:not(.dark) body::after{display:none!important}
-@keyframes light-wave-pass{0%{background-position:-120vw 0}100%{background-position:120vw 0}}
+/* Moved to globals.css. */
