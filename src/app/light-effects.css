@@ -9,24 +9,36 @@ html:not(.dark) body::after {
 }
 
 html:not(.dark) body::before {
-  background:
-    linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.34) 46%, rgba(125, 211, 252, 0.42) 50%, transparent 100%),
-    linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.18) 52%, transparent 100%);
-  background-size: 52rem 2px, 2px 46rem;
-  background-position: -52rem 24%, 72% -46rem;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 24%,
+    rgba(14, 165, 233, 0.1) 42%,
+    rgba(125, 211, 252, 0.18) 50%,
+    rgba(14, 165, 233, 0.1) 58%,
+    transparent 76%,
+    transparent 100%
+  );
+  background-size: 70vw 100%;
+  background-position: -80vw 0;
   mix-blend-mode: multiply;
-  opacity: 0.58 !important;
-  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.22));
-  animation: circuit-scan 9s linear infinite;
+  opacity: 0.38 !important;
+  filter: blur(0.4px);
+  animation: light-wave-pass 22s ease-in-out infinite;
 }
 
 html:not(.dark) body::after {
-  background:
-    radial-gradient(circle at 14% 16%, rgba(14, 165, 233, 0.22), transparent 15rem),
-    radial-gradient(circle at 86% 14%, rgba(99, 102, 241, 0.18), transparent 14rem),
-    radial-gradient(circle at 72% 66%, rgba(56, 189, 248, 0.2), transparent 20rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(14, 165, 233, 0.08));
-  mix-blend-mode: multiply;
-  opacity: 0.68 !important;
-  animation: circuit-glow 6s ease-in-out infinite;
+  background: none !important;
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+@keyframes light-wave-pass {
+  0% {
+    background-position: -80vw 0;
+  }
+
+  100% {
+    background-position: 120vw 0;
+  }
 }
