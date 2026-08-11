@@ -20,7 +20,7 @@ type LanguageStat = {
 
 type GitHubStats = {
   repos: number;
-  totalCommits: number;
+  totalContributions: number | null;
   languages: LanguageStat[];
 };
 
@@ -90,15 +90,19 @@ async function fetchGeneratedStats(): Promise<GitHubStats> {
     throw new Error("Generated GitHub stats are unavailable.");
   }
 
-  const data = (await response.json()) as Partial<GitHubStats>;
+  const data = (await response.json()) as {
+    repos?: number;
+    totalContributions?: number;
+    languages?: unknown;
+  };
 
-  if (typeof data.repos !== "number" || typeof data.totalCommits !== "number") {
+  if (typeof data.repos !== "number" || typeof data.totalContributions !== "number") {
     throw new Error("Generated GitHub stats are invalid.");
   }
 
   return {
     repos: data.repos,
-    totalCommits: data.totalCommits,
+    totalContributions: data.totalContributions,
     languages: normalizeLanguages(data.languages)
   };
 }
@@ -116,27 +120,22 @@ async function fetchRepoLanguages(repoName: string) {
 }
 
 async function fetchLiveGitHubStats(): Promise<GitHubStats> {
-  const [reposResponse, commitsResponse] = await Promise.all([
-    fetch(`https://api.github.com/users/${githubUsername}/repos?per_page=100&sort=updated&type=owner`, {
+  const reposResponse = await fetch(
+    `https://api.github.com/users/${githubUsername}/repos?per_page=100&sort=updated&type=owner`,
+    {
       headers: {
         Accept: "application/vnd.github+json"
       }
-    }),
-    fetch(`https://api.github.com/search/commits?q=${encodeURIComponent(`author:${githubUsername}`)}&per_page=1`, {
-      headers: {
-        Accept: "application/vnd.github+json"
-      }
-    })
-  ]);
+    }
+  );
 
-  if (!reposResponse.ok || !commitsResponse.ok) {
+  if (!reposResponse.ok) {
     throw new Error("Could not load live GitHub stats.");
   }
 
   const repos = ((await reposResponse.json()) as GitHubRepo[]).filter(
     (repo) => !repo.fork && !repo.archived
   );
-  const commitsData = (await commitsResponse.json()) as { total_count?: number };
 
   const languageResults = await Promise.allSettled(repos.map((repo) => fetchRepoLanguages(repo.name)));
   const languageBytes = new Map<string, number>();
@@ -161,7 +160,7 @@ async function fetchLiveGitHubStats(): Promise<GitHubStats> {
 
   return {
     repos: repos.length,
-    totalCommits: commitsData.total_count ?? 0,
+    totalContributions: null,
     languages
   };
 }
@@ -294,10 +293,14 @@ export function Hero({ lang }: HeroProps) {
 
               <div className="rounded-2xl border border-teal-200/80 bg-white/70 p-4 dark:border-cyan-800/50 dark:bg-slate-950/70">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted dark:text-white">
-                  Total commits (all time)
+                  Total contributions (all time)
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-ink dark:text-white">
-                  {isLoadingStats ? "..." : stats ? stats.totalCommits.toLocaleString("en-US") : "—"}
+                  {isLoadingStats
+                    ? "..."
+                    : stats?.totalContributions != null
+                      ? stats.totalContributions.toLocaleString("en-US")
+                      : "—"}
                 </p>
               </div>
             </div>
