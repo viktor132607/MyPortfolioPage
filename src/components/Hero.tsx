@@ -294,7 +294,7 @@ export function Hero({ lang }: HeroProps) {
 
               <div className="rounded-2xl border border-teal-200/80 bg-white/70 p-4 dark:border-cyan-800/50 dark:bg-slate-950/70">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted dark:text-white">
-                  Total commits
+                  Total commits (all time)
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-ink dark:text-white">
                   {isLoadingStats ? "..." : stats ? stats.totalCommits.toLocaleString("en-US") : "—"}
