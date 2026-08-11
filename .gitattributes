@@ -1,0 +1,2 @@
+next.config.js linguist-detectable=false
+postcss.config.js linguist-detectable=false
