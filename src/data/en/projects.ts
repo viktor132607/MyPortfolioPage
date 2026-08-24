@@ -44,11 +44,11 @@ export const projects = [
   },
   {
     number: "03",
-    title: "HygiaTrade — WIP E-commerce Platform",
+    title: "HygiaTrade — E-commerce Platform",
     context:
-      "Status: WIP portfolio project. Full-stack e-commerce system for hygiene and cleaning products with separate frontend and backend archives.",
+      "Status: Live full-stack project. E-commerce system for hygiene and cleaning products with a deployed Next.js frontend and ASP.NET Core Web API backend.",
     solution:
-      "WIP e-commerce platform demonstrating work on catalog flow, user flow, API architecture, authentication, data persistence and admin/business logic.",
+      "Built as a complete full-stack e-commerce platform covering product catalog, customer flows, authentication, persistence, administration and business logic.",
     features: [
       "Product catalog and category structure",
       "Product details pages",
@@ -61,11 +61,11 @@ export const projects = [
       "JWT authentication and role-based access",
       "ASP.NET Core Web API + PostgreSQL backend"
     ],
-    stack: ["ASP.NET Core Web API", "Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "JWT", "Docker"],
-    previewType: "screenshot",
-    previewUrl: "",
-    previewImage: "/projects/hygiatrade-preview.png",
-    repositoryUrl: ""
+    stack: ["ASP.NET Core Web API", "Next.js", "React", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "JWT", "Docker", "Render"],
+    previewType: "iframe",
+    previewUrl: "https://higiatrade-client.onrender.com/",
+    repositoryUrl: "https://github.com/viktor132607/HigiaTrade.Client",
+    sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
     number: "04",
