@@ -94,11 +94,10 @@ export const projects = [
       "PostgreSQL persistence with Entity Framework Core"
     ],
     stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "ASP.NET Core Web API", "C#", ".NET", "PostgreSQL", "Entity Framework Core", "REST API", "Docker", "Render"],
-    previewType: "locked",
-    previewUrl: "",
-    previewImage: "",
+    previewType: "iframe",
+    previewUrl: "https://orisia-client.onrender.com/",
     repositoryUrl: "https://github.com/viktor132607/Orisia.Client",
-    sleepNotice: "Preview locked until the public client deployment is available."
+    sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
     number: "05",
