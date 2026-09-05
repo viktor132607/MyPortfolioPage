@@ -209,10 +209,10 @@ export const projects = [
       "Cleaner separation of concerns than the MVC version"
     ],
     stack: ["ASP.NET Core Web API", "Next.js", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "Docker", "Render"],
-    previewType: "locked",
+    previewType: "screenshot",
     previewUrl: "",
-    previewImage: "",
+    previewImage: "/projects/paladinhub-home.png",
     repositoryUrl: "",
-    sleepNotice: "WIP Web API + Next.js version. Preview locked until the project has its own UI screenshot, live deployment and repository."
+    sleepNotice: "WIP Web API + Next.js version. No public hosting yet."
   }
 ] as const;
