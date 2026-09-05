@@ -102,13 +102,16 @@ export const projects = [
   },
   {
     number: "05",
-    title: "Elenski Balkandzii — WIP Full-Stack Platform",
+    title: "Elenski Balkandzii — Hosted WIP Full-Stack Platform",
     context:
-      "Status: WIP project. New client-server application split into dedicated frontend and backend repositories.",
+      "Status: Live hosted WIP project. Client-server application split into dedicated Next.js frontend and ASP.NET Core Web API backend repositories, with the frontend deployed on Render.",
     solution:
-      "Initialized with a Next.js and TypeScript frontend plus a .NET 10 ASP.NET Core Web API backend using Entity Framework Core and PostgreSQL, ready for domain-specific features to be added.",
+      "Built with a responsive Next.js and TypeScript frontend plus a .NET 10 ASP.NET Core Web API backend using Entity Framework Core and PostgreSQL. The frontend now includes reusable navigation, footer, core pages and a clean responsive presentation layer and is deployed as a static Render site.",
     features: [
+      "Live frontend hosting on Render",
       "Dedicated Next.js frontend repository",
+      "Responsive desktop, tablet and mobile layout",
+      "Reusable navbar, footer and core page structure",
       "TypeScript App Router structure",
       "Reusable API client configuration",
       "ASP.NET Core Web API backend",
@@ -119,22 +122,25 @@ export const projects = [
       "Scalar/OpenAPI API documentation",
       "Docker Compose PostgreSQL setup"
     ],
-    stack: ["Next.js", "React", "TypeScript", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker"],
+    stack: ["Next.js", "React", "TypeScript", "Responsive UI", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker", "Render"],
     previewType: "locked",
     previewUrl: "",
     previewImage: "",
     repositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Client",
-    sleepNotice: "WIP project. Preview locked until the application UI and deployment are ready."
+    sleepNotice: "Frontend is live on Render. The exact public deployment URL is not stored in the portfolio configuration yet."
   },
   {
     number: "06",
-    title: "GabiCraft — WIP Full-Stack Project",
+    title: "GabiCraft — Hosted WIP Full-Stack Project",
     context:
-      "Status: WIP project. Full-stack application scaffold organized as a single repository with separate frontend and backend projects.",
+      "Status: Live hosted WIP project. Full-stack application organized as a single repository with separate Next.js frontend and ASP.NET Core Web API backend projects, with the frontend deployed on Render.",
     solution:
-      "Initialized with a Next.js and TypeScript client plus a .NET 10 ASP.NET Core Web API server, Entity Framework Core data layer and PostgreSQL development environment.",
+      "Built with a responsive Next.js and TypeScript client plus a .NET 10 ASP.NET Core Web API server, Entity Framework Core data layer and PostgreSQL development environment. The frontend includes reusable navigation, footer, core pages and a clean responsive UI and is deployed as a static Render site.",
     features: [
+      "Live frontend hosting on Render",
       "Next.js frontend project",
+      "Responsive desktop, tablet and mobile layout",
+      "Reusable navbar, footer and core page structure",
       "TypeScript App Router structure",
       "Reusable Axios API client",
       "ASP.NET Core Web API backend",
@@ -145,12 +151,12 @@ export const projects = [
       "Scalar/OpenAPI API documentation",
       "Docker Compose PostgreSQL environment"
     ],
-    stack: ["Next.js", "React", "TypeScript", "Axios", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker"],
+    stack: ["Next.js", "React", "TypeScript", "Axios", "Responsive UI", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker", "Render"],
     previewType: "locked",
     previewUrl: "",
     previewImage: "",
     repositoryUrl: "https://github.com/viktor132607/GabiCraft",
-    sleepNotice: "WIP project. Preview locked until the application UI and deployment are ready."
+    sleepNotice: "Frontend is live on Render. The exact public deployment URL is not stored in the portfolio configuration yet."
   },
   {
     number: "07",
