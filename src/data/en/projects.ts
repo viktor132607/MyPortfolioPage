@@ -76,6 +76,84 @@ export const projects = [
   },
   {
     number: "04",
+    title: "Orisia — Bulgarian Folk Community Platform",
+    context:
+      "Status: Active full-stack project. A bilingual platform centered around Bulgarian folk dance, community updates, events and cultural content.",
+    solution:
+      "Built as a separated Next.js frontend and ASP.NET Core Web API backend with PostgreSQL persistence. The application combines public cultural content with account and administration functionality in a reusable client-server architecture.",
+    features: [
+      "News and community feed",
+      "Events and calendar sections",
+      "Horoteka dance library for Bulgarian dances and rhythms",
+      "Gallery and cultural content sections",
+      "BG/EN bilingual interface",
+      "Account and login flows",
+      "Administrative content management areas",
+      "Responsive Next.js frontend",
+      "ASP.NET Core Web API backend",
+      "PostgreSQL persistence with Entity Framework Core"
+    ],
+    stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "ASP.NET Core Web API", "C#", ".NET", "PostgreSQL", "Entity Framework Core", "REST API", "Docker", "Render"],
+    previewType: "locked",
+    previewUrl: "",
+    previewImage: "",
+    repositoryUrl: "https://github.com/viktor132607/Orisia.Client",
+    sleepNotice: "Preview locked until the public client deployment is available."
+  },
+  {
+    number: "05",
+    title: "Elenski Balkandzii — WIP Full-Stack Platform",
+    context:
+      "Status: WIP project. New client-server application split into dedicated frontend and backend repositories.",
+    solution:
+      "Initialized with a Next.js and TypeScript frontend plus a .NET 10 ASP.NET Core Web API backend using Entity Framework Core and PostgreSQL, ready for domain-specific features to be added.",
+    features: [
+      "Dedicated Next.js frontend repository",
+      "TypeScript App Router structure",
+      "Reusable API client configuration",
+      "ASP.NET Core Web API backend",
+      ".NET 10 solution structure",
+      "Domain and Data projects",
+      "Entity Framework Core",
+      "PostgreSQL connection setup",
+      "Scalar/OpenAPI API documentation",
+      "Docker Compose PostgreSQL setup"
+    ],
+    stack: ["Next.js", "React", "TypeScript", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker"],
+    previewType: "locked",
+    previewUrl: "",
+    previewImage: "",
+    repositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Client",
+    sleepNotice: "WIP project. Preview locked until the application UI and deployment are ready."
+  },
+  {
+    number: "06",
+    title: "GabiCraft — WIP Full-Stack Project",
+    context:
+      "Status: WIP project. Full-stack application scaffold organized as a single repository with separate frontend and backend projects.",
+    solution:
+      "Initialized with a Next.js and TypeScript client plus a .NET 10 ASP.NET Core Web API server, Entity Framework Core data layer and PostgreSQL development environment.",
+    features: [
+      "Next.js frontend project",
+      "TypeScript App Router structure",
+      "Reusable Axios API client",
+      "ASP.NET Core Web API backend",
+      ".NET 10 solution structure",
+      "Separated Domain and Data projects",
+      "Entity Framework Core",
+      "PostgreSQL configuration",
+      "Scalar/OpenAPI API documentation",
+      "Docker Compose PostgreSQL environment"
+    ],
+    stack: ["Next.js", "React", "TypeScript", "Axios", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker"],
+    previewType: "locked",
+    previewUrl: "",
+    previewImage: "",
+    repositoryUrl: "https://github.com/viktor132607/GabiCraft",
+    sleepNotice: "WIP project. Preview locked until the application UI and deployment are ready."
+  },
+  {
+    number: "07",
     title: "PaladinHub 1.0 — Portfolio Project",
     context:
       "Status: Portfolio project. Community platform for the World of Warcraft Paladin audience, built as a .NET 8 MVC application with an account system, content modules and a Talent Tree Builder.",
@@ -111,7 +189,7 @@ export const projects = [
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
-    number: "05",
+    number: "08",
     title: "PaladinHub 2.0 — WIP Portfolio Project",
     context:
       "Status: WIP portfolio project. Planned modernization of PaladinHub into a separated ASP.NET Core Web API backend and standalone Next.js frontend.",
