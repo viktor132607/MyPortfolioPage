@@ -123,11 +123,9 @@ export const projects = [
       "Docker Compose PostgreSQL setup"
     ],
     stack: ["Next.js", "React", "TypeScript", "Responsive UI", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker", "Render"],
-    previewType: "locked",
-    previewUrl: "",
-    previewImage: "",
-    repositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Client",
-    sleepNotice: "Frontend is live on Render. The exact public deployment URL is not stored in the portfolio configuration yet."
+    previewType: "iframe",
+    previewUrl: "https://elenskibalkandzii-client.onrender.com/",
+    repositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Client"
   },
   {
     number: "06",
@@ -152,11 +150,9 @@ export const projects = [
       "Docker Compose PostgreSQL environment"
     ],
     stack: ["Next.js", "React", "TypeScript", "Axios", "Responsive UI", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker", "Render"],
-    previewType: "locked",
-    previewUrl: "",
-    previewImage: "",
-    repositoryUrl: "https://github.com/viktor132607/GabiCraft",
-    sleepNotice: "Frontend is live on Render. The exact public deployment URL is not stored in the portfolio configuration yet."
+    previewType: "iframe",
+    previewUrl: "https://gabicraft.onrender.com/",
+    repositoryUrl: "https://github.com/viktor132607/GabiCraft"
   },
   {
     number: "07",
