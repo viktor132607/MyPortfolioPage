@@ -209,10 +209,9 @@ export const projects = [
       "Cleaner separation of concerns than the MVC version"
     ],
     stack: ["ASP.NET Core Web API", "Next.js", "TypeScript", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "Docker", "Render"],
-    previewType: "screenshot",
-    previewUrl: "",
-    previewImage: "/projects/paladinhub-home.png",
-    repositoryUrl: "",
-    sleepNotice: "WIP Web API + Next.js version. No public hosting yet."
+    previewType: "iframe",
+    previewUrl: "https://paladinhubv2-client.onrender.com/",
+    repositoryUrl: "https://github.com/viktor132607/PaladinhubV2.Client",
+    sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   }
 ] as const;
