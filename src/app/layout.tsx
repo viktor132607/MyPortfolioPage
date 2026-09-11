@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./mobile-skills.css";
 
 export const metadata: Metadata = {
   title: "Viktor Iliev | Portfolio",
