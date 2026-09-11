@@ -50,6 +50,8 @@
   }
 
   #top > div.grid > div.max-w-5xl > div:first-child > div.mt-7 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     border-color: transparent !important;
     background: transparent !important;
     box-shadow: none !important;
