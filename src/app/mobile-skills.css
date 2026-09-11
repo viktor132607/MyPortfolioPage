@@ -1,0 +1,51 @@
+@media (max-width: 639px) {
+  #skills {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #skills > div:first-child {
+    margin-bottom: 1.5rem;
+  }
+
+  #skills > div.grid {
+    display: flex;
+    gap: 0.875rem;
+    margin-right: -1rem;
+    padding-right: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #skills > div.grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  #skills > div.grid > article {
+    flex: 0 0 min(82vw, 340px);
+    min-height: 220px;
+    padding: 1.125rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  #skills > div.grid > article h3 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+  }
+
+  #skills > div.grid > article > div {
+    margin-top: 1rem;
+    gap: 0.625rem;
+  }
+
+  #skills > div.grid > article span {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+}
