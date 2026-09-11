@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MobileExperienceCollapse } from "@/components/MobileExperienceCollapse";
 import "./globals.css";
 import "./mobile-skills.css";
 
@@ -10,7 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MobileExperienceCollapse />
+        {children}
+      </body>
     </html>
   );
 }
