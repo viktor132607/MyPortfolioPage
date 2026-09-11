@@ -177,7 +177,7 @@ export function Header({ lang }: HeaderProps) {
               rel="noopener noreferrer"
               className="inline-flex h-10 items-center justify-center px-1 text-[15px] font-bold tracking-[0.01em] text-slate-900 transition hover:opacity-70 dark:text-white"
             >
-              CV
+              {t.buttons.downloadCv}
             </a>
 
             <a
