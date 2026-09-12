@@ -81,7 +81,7 @@ export const sections = {
       },
       contact: {
         eyebrow: "Контакт",
-        title: "Ако идеята е важна, свържете се.",
+        title: "Контакт",
         text: "",
         email: "Имейл",
         phone: "Телефон"
