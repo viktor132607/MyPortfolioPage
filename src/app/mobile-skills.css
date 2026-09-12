@@ -69,12 +69,24 @@
   }
 
   #about > article.card > div > div.grid > div {
-    padding: 0 !important;
+    position: relative;
+    padding: 0 0 0 1.35rem !important;
     border-color: transparent !important;
     background: transparent !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+  }
+
+  #about > article.card > div > div.grid > div::before {
+    content: "";
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 9999px;
+    background: rgb(var(--color-accent));
   }
 
   #experience .card,
@@ -142,6 +154,14 @@
     border-bottom: 0 !important;
     border-radius: 0 0 1.8rem 1.8rem;
   }
+}
+
+#about > article.card > div > div.grid > div > .kicker {
+  display: none !important;
+}
+
+#about > article.card > div > div.grid > div > h3 {
+  margin-top: 0 !important;
 }
 
 #projects article > div:first-child > .kicker {
