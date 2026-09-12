@@ -12,7 +12,9 @@ export function MobileExperienceCollapse() {
       content: HTMLElement,
       title: HTMLElement,
       detailNodes: HTMLElement[],
-      dataKey: string
+      dataKey: string,
+      onRender?: (isMobile: boolean, expanded: boolean) => void,
+      onCleanup?: () => void
     ) => {
       const button = document.createElement("button");
       const label = document.createElement("span");
@@ -48,6 +50,7 @@ export function MobileExperienceCollapse() {
 
         button.setAttribute("aria-expanded", String(expanded));
         button.classList.toggle("is-open", expanded);
+        onRender?.(isMobile, expanded);
       };
 
       const handleClick = () => {
@@ -65,6 +68,7 @@ export function MobileExperienceCollapse() {
         detailNodes.forEach((node) => {
           node.hidden = false;
         });
+        onCleanup?.();
         button.remove();
       });
     };
@@ -131,14 +135,36 @@ export function MobileExperienceCollapse() {
 
       if (!preview || !content || !title) return;
 
-      const detailNodes = [
-        preview,
-        ...Array.from(content.children).filter(
-          (node): node is HTMLElement => node instanceof HTMLElement && node !== title
-        )
-      ];
+      const detailNodes = Array.from(content.children).filter(
+        (node): node is HTMLElement => node instanceof HTMLElement && node !== title
+      );
 
-      setupCollapse(content, title, detailNodes, "mobileCertificateToggle");
+      const restorePreview = () => {
+        preview.hidden = false;
+        preview.classList.remove("mobile-certificate-preview");
+        if (preview.parentElement !== card || preview.nextElementSibling !== content) {
+          card.insertBefore(preview, content);
+        }
+      };
+
+      setupCollapse(
+        content,
+        title,
+        detailNodes,
+        "mobileCertificateToggle",
+        (isMobile, expanded) => {
+          if (isMobile) {
+            if (preview.parentElement !== content) {
+              content.appendChild(preview);
+            }
+            preview.classList.add("mobile-certificate-preview");
+            preview.hidden = !expanded;
+          } else {
+            restorePreview();
+          }
+        },
+        restorePreview
+      );
     });
 
     return () => cleanup.forEach((fn) => fn());
