@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MobileExperienceCollapse } from "@/components/MobileExperienceCollapse";
 import "./globals.css";
 import "./mobile-skills.css";
+import "./project-separation.css";
 
 export const metadata: Metadata = {
   title: "Viktor Iliev | Portfolio",
