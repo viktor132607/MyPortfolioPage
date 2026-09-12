@@ -173,6 +173,10 @@
     transform: rotate(225deg) translate(-1px, -1px);
   }
 
+  #projects [hidden] {
+    display: none !important;
+  }
+
   #certificates > div.grid {
     gap: 1rem;
   }
