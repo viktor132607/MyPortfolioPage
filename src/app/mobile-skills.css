@@ -167,7 +167,9 @@
   }
 
   #certificates article > div:last-child > a {
-    margin-top: 0.6rem !important;
+    display: flex !important;
+    width: fit-content;
+    margin-top: 0.75rem !important;
     padding: 0.4rem 0.85rem;
     font-size: 0.8rem;
   }
