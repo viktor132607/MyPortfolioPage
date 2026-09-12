@@ -1,0 +1,40 @@
+/* Clear visual hierarchy between project title/details, tech stack and preview. */
+#projects article > div:first-child > div:last-child {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(14, 116, 144, 0.24);
+}
+
+#projects article > div:first-child + div {
+  margin-top: 0.85rem;
+  overflow: hidden;
+  border-top: 3px solid rgba(14, 165, 233, 0.58) !important;
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow:
+    inset 0 12px 28px rgba(14, 165, 233, 0.06),
+    0 -8px 24px rgba(14, 116, 144, 0.10);
+}
+
+html.dark #projects article > div:first-child > div:last-child {
+  border-top-color: rgba(34, 211, 238, 0.30);
+}
+
+html.dark #projects article > div:first-child + div {
+  border-top-color: rgba(34, 211, 238, 0.70) !important;
+  box-shadow:
+    inset 0 12px 30px rgba(34, 211, 238, 0.08),
+    0 -8px 28px rgba(34, 211, 238, 0.12);
+}
+
+@media (max-width: 639px) {
+  #projects article > div:first-child > div:last-child {
+    margin-top: 1.1rem;
+    padding-top: 0.85rem;
+  }
+
+  #projects article > div:first-child + div {
+    margin-top: 0.7rem;
+    border-top-width: 3px !important;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
