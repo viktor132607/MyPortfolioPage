@@ -1,31 +1,32 @@
 @media (max-width: 639px) {
-  /* Restore readable text cards over the mobile background. */
+  /* Use the same restrained glass-card treatment as the GitHub stat boxes. */
   #top > div.grid > div.max-w-5xl > div:first-child > div.mt-7 {
     margin-top: 0.75rem !important;
     padding: 1rem !important;
-    border: 1px solid rgb(var(--color-line)) !important;
-    border-radius: 1.5rem !important;
-    background: rgba(var(--color-panel), 0.82) !important;
-    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(14, 116, 144, 0.28) !important;
+    border-radius: 1rem !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
   }
 
   #about > article.card {
     padding: 1rem !important;
-    border: 1px solid rgb(var(--color-line)) !important;
-    background: rgba(var(--color-panel), 0.82) !important;
-    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(14, 116, 144, 0.28) !important;
+    border-radius: 1rem !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
   }
 
   #about > article.card > div > div.grid > div {
     padding: 1rem !important;
-    border: 1px solid rgba(var(--color-line), 0.75) !important;
-    border-radius: 1.25rem !important;
-    background: rgba(var(--color-panel), 0.72) !important;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08) !important;
+    border: 1px solid rgba(14, 116, 144, 0.28) !important;
+    border-radius: 1rem !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    box-shadow: none !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
   }
@@ -37,8 +38,8 @@
   html.dark #top > div.grid > div.max-w-5xl > div:first-child > div.mt-7,
   html.dark #about > article.card,
   html.dark #about > article.card > div > div.grid > div {
-    border-color: rgba(34, 211, 238, 0.34) !important;
-    background: rgba(5, 15, 32, 0.84) !important;
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28), 0 0 24px rgba(34, 211, 238, 0.1) !important;
+    border-color: rgba(34, 211, 238, 0.28) !important;
+    background: rgba(7, 17, 34, 0.72) !important;
+    box-shadow: none !important;
   }
 }
