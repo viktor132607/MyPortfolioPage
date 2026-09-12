@@ -3,7 +3,7 @@ export const profile = {
       role: "",
       headline: "Viktor Iliev",
       summary:
-        "Full Stack developer focused on ASP.NET Core Web APIs, backend logic, databases and practical full-stack web systems. Frontend: I work with Next.js, React and TypeScript, while my finance, audit and accounting experience adds business context for clear data, workflows and reporting.",
+        "Full Stack developer focused on ASP.NET Core Web APIs, backend logic, databases and practical full-stack web systems. On the frontend, I work with Next.js, React and TypeScript, while my finance, audit and accounting experience adds business context for clear data, workflows and reporting.",
       email: "iliev132607@gmail.com",
       phone: "+359 899564288",
       location: "Varna / Bulgaria",
