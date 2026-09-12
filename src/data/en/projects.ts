@@ -21,7 +21,8 @@ export const projects = [
     stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Responsive UI", "Deployment"],
     previewType: "iframe",
     previewUrl: "https://dgvisionstudio.com/",
-    repositoryUrl: "https://github.com/viktor132607/DGVisionStudio.client"
+    repositoryUrl: "https://github.com/viktor132607/DGVisionStudio.client",
+    backendRepositoryUrl: "https://github.com/viktor132607/DGVisionStudio.Server"
   },
   {
     number: "02",
@@ -40,7 +41,9 @@ export const projects = [
     ],
     stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "i18n", "Responsive UI", "Deployment"],
     previewType: "iframe",
-    previewUrl: "https://nhalachev.com/"
+    previewUrl: "https://nhalachev.com/",
+    repositoryUrl: "https://github.com/viktor132607/HalachevAccounting.Client",
+    backendRepositoryUrl: "https://github.com/viktor132607/HalachevAccounting.Server"
   },
   {
     number: "03",
@@ -72,6 +75,7 @@ export const projects = [
     previewType: "iframe",
     previewUrl: "https://higiatrade-client.onrender.com/",
     repositoryUrl: "https://github.com/viktor132607/HigiaTrade.Client",
+    backendRepositoryUrl: "https://github.com/viktor132607/HigiaTrade.Server",
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
@@ -97,6 +101,7 @@ export const projects = [
     previewType: "iframe",
     previewUrl: "https://orisia-client.onrender.com/",
     repositoryUrl: "https://github.com/viktor132607/Orisia.Client",
+    backendRepositoryUrl: "https://github.com/viktor132607/Orisia.Server",
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
@@ -124,7 +129,8 @@ export const projects = [
     stack: ["Next.js", "React", "TypeScript", "Responsive UI", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker", "Render"],
     previewType: "iframe",
     previewUrl: "https://elenskibalkandzii-client.onrender.com/",
-    repositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Client"
+    repositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Client",
+    backendRepositoryUrl: "https://github.com/viktor132607/ElenskiBalkandzii.Server"
   },
   {
     number: "06",
@@ -212,6 +218,7 @@ export const projects = [
     previewType: "iframe",
     previewUrl: "https://paladinhubv2-client.onrender.com/",
     repositoryUrl: "https://github.com/viktor132607/PaladinhubV2.Client",
+    backendRepositoryUrl: "https://github.com/viktor132607/PaladinhubV2.Server",
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   }
 ] as const;
