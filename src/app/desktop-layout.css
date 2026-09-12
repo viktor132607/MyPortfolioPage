@@ -44,16 +44,16 @@
       0 0 36px rgba(34, 211, 238, 0.13) !important;
   }
 
-  /* Slightly tighten spacing between desktop sections. */
+  /* Keep desktop sections visually connected instead of leaving large empty bands. */
   .section-padding {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.75rem !important;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 4.25rem !important;
-    padding-bottom: 4.25rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
