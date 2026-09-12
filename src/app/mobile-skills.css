@@ -202,8 +202,28 @@
   }
 
   #certificates article > div:last-child > div.mt-5.grid {
-    margin-top: 0.7rem !important;
+    margin-top: 0.4rem !important;
     gap: 0.4rem;
+  }
+
+  #certificates .certificate-area-row {
+    display: block !important;
+  }
+
+  #certificates .certificate-area-row > span:first-child {
+    display: none !important;
+  }
+
+  #certificates .certificate-area-row > span:last-child {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: rgb(var(--color-ink));
+  }
+
+  .dark #certificates .certificate-area-row > span:last-child {
+    color: white;
   }
 
   #certificates article .mobile-experience-toggle {
