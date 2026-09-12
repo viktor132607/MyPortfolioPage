@@ -105,11 +105,7 @@ export function MobileExperienceCollapse() {
 
     projectCards.forEach((card, index) => {
       const projectData = (content.en.projects[index] ?? null) as
-        | {
-            repositoryUrl?: string;
-            backendRepositoryUrl?: string;
-            previewUrl?: string;
-          }
+        | { previewUrl?: string }
         | null;
 
       const cardContent = card.firstElementChild as HTMLElement | null;
@@ -133,47 +129,6 @@ export function MobileExperienceCollapse() {
         title.textContent = originalTitle;
         projectType.remove();
       });
-
-      const githubLinks = Array.from(card.querySelectorAll<HTMLAnchorElement>('a[href*="github.com"]'));
-      const frontendLink = projectData?.repositoryUrl
-        ? githubLinks.find((link) => link.href === projectData.repositoryUrl)
-        : githubLinks[0];
-      const existingBackendLink = projectData?.backendRepositoryUrl
-        ? githubLinks.find((link) => link.href === projectData.backendRepositoryUrl)
-        : undefined;
-
-      if (frontendLink && projectData?.backendRepositoryUrl) {
-        const originalFrontendText = frontendLink.textContent;
-        frontendLink.textContent = "Open frontend repository";
-
-        let backendLink = existingBackendLink;
-        let createdBackendLink = false;
-        const originalBackendText = backendLink?.textContent ?? null;
-
-        if (!backendLink) {
-          backendLink = frontendLink.cloneNode(true) as HTMLAnchorElement;
-          backendLink.href = projectData.backendRepositoryUrl;
-          frontendLink.insertAdjacentElement("afterend", backendLink);
-          createdBackendLink = true;
-        }
-
-        backendLink.textContent = "Open backend repository";
-
-        cleanup.push(() => {
-          frontendLink.textContent = originalFrontendText;
-          if (createdBackendLink) {
-            backendLink?.remove();
-          } else if (backendLink) {
-            backendLink.textContent = originalBackendText;
-          }
-        });
-      } else if (frontendLink) {
-        const originalText = frontendLink.textContent;
-        frontendLink.textContent = "Open GitHub repository";
-        cleanup.push(() => {
-          frontendLink.textContent = originalText;
-        });
-      }
 
       if (index === 6 && projectData?.previewUrl) {
         const existingIframe = card.querySelector<HTMLIFrameElement>("iframe");
