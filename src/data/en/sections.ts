@@ -17,7 +17,7 @@ export const sections = {
       },
       about: {
         eyebrow: "About",
-        title: "Software development profile with business context",
+        title: "My profile",
         text:
           "I focus on building software across backend logic, APIs, databases and full-stack web development. I work with C#/.NET, ASP.NET Core, Next.js and TypeScript, while my accounting, audit and financial-control background helps me understand business processes, data accuracy and reporting requirements more clearly."
       },
