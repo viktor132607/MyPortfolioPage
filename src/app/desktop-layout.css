@@ -1,0 +1,59 @@
+@media (min-width: 640px) {
+  /* Restore the grouped Tech Stack cards on tablet/desktop only. */
+  #skills > div.grid {
+    display: grid !important;
+    gap: 1.25rem !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+  }
+
+  #skills > div.grid > article.card {
+    position: static;
+    flex: none !important;
+    min-height: auto !important;
+    padding: 1.5rem !important;
+    border: 1px solid rgba(14, 116, 144, 0.28) !important;
+    border-radius: 2rem !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(240, 249, 255, 0.82)) !important;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.72),
+      0 22px 60px rgba(15, 23, 42, 0.12),
+      0 0 26px rgba(14, 165, 233, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+  }
+
+  #skills > div.grid > article.card::before {
+    content: none !important;
+  }
+
+  #skills > div.grid > article.card > div {
+    margin-top: 1.25rem !important;
+  }
+
+  html.dark #skills > div.grid > article.card {
+    border-color: rgba(34, 211, 238, 0.34) !important;
+    background: linear-gradient(180deg, rgba(5, 15, 32, 0.92), rgba(3, 10, 24, 0.82)) !important;
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.1),
+      0 20px 80px rgba(0, 0, 0, 0.32),
+      0 0 36px rgba(34, 211, 238, 0.13) !important;
+  }
+
+  /* Slightly tighten spacing between desktop sections. */
+  .section-padding {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 4.25rem !important;
+    padding-bottom: 4.25rem !important;
+  }
+}
