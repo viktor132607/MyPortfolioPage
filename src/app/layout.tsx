@@ -7,7 +7,10 @@ import "./mobile-background.css";
 
 export const metadata: Metadata = {
   title: "Viktor Iliev | Portfolio",
-  description: "Personal portfolio built with Next.js, TypeScript and TailwindCSS."
+  description: "Personal portfolio built with Next.js, TypeScript and TailwindCSS.",
+  icons: {
+    icon: "/favicon.svg"
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
