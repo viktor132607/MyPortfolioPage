@@ -125,8 +125,35 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
             {t.projects.map((project) => {
               const hasLiveUrl = Boolean(project.previewUrl);
               const hasRepositoryUrl = Boolean(project.repositoryUrl);
+              const hasBackendRepositoryUrl = Boolean(project.backendRepositoryUrl);
               const hasScreenshot = project.previewType === "screenshot" && Boolean(project.previewImage);
               const canOpenPreview = hasScreenshot && hasLiveUrl;
+
+              const repositoryLinks = (
+                <>
+                  {hasRepositoryUrl ? (
+                    <a
+                      href={project.repositoryUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition hover:text-ink dark:hover:text-white"
+                    >
+                      {hasBackendRepositoryUrl ? "Open frontend repository" : "Open GitHub repository"}
+                    </a>
+                  ) : null}
+
+                  {hasBackendRepositoryUrl ? (
+                    <a
+                      href={project.backendRepositoryUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition hover:text-ink dark:hover:text-white"
+                    >
+                      Open backend repository
+                    </a>
+                  ) : null}
+                </>
+              );
 
               return (
                 <article
@@ -190,16 +217,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                       />
 
                       <div className="flex flex-wrap items-center justify-end gap-4 border-t border-line bg-panel px-4 py-3 text-xs font-semibold text-muted dark:border-cyan-900/50 dark:bg-slate-950 dark:text-white">
-                        {hasRepositoryUrl ? (
-                          <a
-                            href={project.repositoryUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="transition hover:text-ink dark:hover:text-white"
-                          >
-                            Open GitHub repository
-                          </a>
-                        ) : null}
+                        {repositoryLinks}
 
                         <a
                           href={project.previewUrl}
@@ -250,16 +268,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                       )}
 
                       <div className="flex flex-wrap items-center justify-end gap-4 border-t border-line bg-panel px-4 py-3 text-xs font-semibold text-muted dark:border-cyan-900/50 dark:bg-slate-950 dark:text-white">
-                        {hasRepositoryUrl ? (
-                          <a
-                            href={project.repositoryUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="transition hover:text-ink dark:hover:text-white"
-                          >
-                            Open GitHub repository
-                          </a>
-                        ) : null}
+                        {repositoryLinks}
 
                         {hasLiveUrl ? (
                           <a
