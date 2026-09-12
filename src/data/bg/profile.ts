@@ -3,7 +3,7 @@ export const profile = {
       role: "",
       headline: "Виктор Илиев",
       summary:
-        "C# / .NET developer с фокус върху ASP.NET Core Web APIs, backend logic, databases и практични full-stack web системи. Във frontend частта работя с Next.js, React и TypeScript, а опитът ми във финанси, одит и счетоводство добавя бизнес контекст за ясни данни, работни процеси и отчетност.",
+        "Full-Stack Developer с фокус върху backend логика с ASP.NET Core Web API, бази данни и практични full-stack уеб системи. За frontend разработка използвам Next.js, React, TypeScript и Tailwind CSS, а опитът ми във финансите ми помага да разбирам и изграждам ясни и практични бизнес процеси.",
       email: "iliev132607@gmail.com",
       phone: "+359 899564288",
       location: "Varna / Bulgaria",
