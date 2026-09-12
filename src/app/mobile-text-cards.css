@@ -43,3 +43,9 @@
     box-shadow: none !important;
   }
 }
+
+/* Remove certificate Area metadata on every viewport. */
+#certificates article > div:last-child > div.mt-5.grid > div:nth-child(3),
+#certificates .certificate-area-row {
+  display: none !important;
+}
