@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { content } from "@/data/profile";
 
 export function MobileExperienceCollapse() {
   useEffect(() => {
@@ -91,7 +92,27 @@ export function MobileExperienceCollapse() {
 
     const projectCards = Array.from(document.querySelectorAll<HTMLElement>("#projects article"));
 
-    projectCards.forEach((card) => {
+    projectCards.forEach((card, index) => {
+      const projectData = (content.en.projects[index] ?? null) as
+        | { backendRepositoryUrl?: string }
+        | null;
+      const repositoryLink = card.querySelector<HTMLAnchorElement>('a[href*="github.com"]');
+
+      if (repositoryLink && projectData?.backendRepositoryUrl) {
+        const originalText = repositoryLink.textContent;
+        const backendLink = repositoryLink.cloneNode(true) as HTMLAnchorElement;
+
+        repositoryLink.textContent = "Open frontend repository";
+        backendLink.href = projectData.backendRepositoryUrl;
+        backendLink.textContent = "Open backend repository";
+        repositoryLink.insertAdjacentElement("afterend", backendLink);
+
+        cleanup.push(() => {
+          repositoryLink.textContent = originalText;
+          backendLink.remove();
+        });
+      }
+
       const content = card.firstElementChild as HTMLElement | null;
       const title = content?.querySelector<HTMLElement>(":scope > h3");
       const kicker = content?.querySelector<HTMLElement>(":scope > .kicker");
