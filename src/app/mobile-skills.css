@@ -121,3 +121,7 @@
     transform: rotate(225deg) translate(-1px, -1px);
   }
 }
+
+#projects article > div:first-child > .kicker {
+  display: none;
+}
