@@ -29,7 +29,7 @@ export const sections = {
       },
       projects: {
         eyebrow: "Projects / Deep Dives",
-        title: "Projects",
+        title: "My projects",
         text:
           "Projects focused on frontend structure, backend logic, database design, admin workflows, multilingual UI and deployment-ready web solutions.",
         labels: {
