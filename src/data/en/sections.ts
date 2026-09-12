@@ -45,7 +45,7 @@ export const sections = {
       },
       education: {
         eyebrow: "Education",
-        title: "Education and professional development.",
+        title: "Education",
         text:
           "Software development training is placed first, supported by economics education and a professional foundation in accounting, audit and financial control."
       },
