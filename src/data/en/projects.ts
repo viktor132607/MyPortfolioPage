@@ -1,7 +1,7 @@
 export const projects = [
   {
     number: "01",
-    title: "DG Vision Studio — Photography Business Website",
+    title: "DG Vision Studio — Photography Website",
     context:
       "Status: Real project. Public website for a photography studio focused on business presentation, portfolio content, services and client contact.",
     solution:
@@ -44,7 +44,7 @@ export const projects = [
   },
   {
     number: "03",
-    title: "HygiaTrade — Full-Stack E-commerce & Inventory Platform",
+    title: "HygiaTrade — E-commerce Platform",
     context:
       "Status: Live full-stack project. A production-deployed commerce platform for hygiene and cleaning products with a Next.js/React storefront, ASP.NET Core REST API, PostgreSQL persistence and a protected operational back office.",
     solution:
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     number: "04",
-    title: "Orisia — Bulgarian Folk Community Platform",
+    title: "Orisia — Folk Community Platform",
     context:
       "Status: Active full-stack project. A bilingual platform centered around Bulgarian folk dance, community updates, events and cultural content.",
     solution:
@@ -101,7 +101,7 @@ export const projects = [
   },
   {
     number: "05",
-    title: "Elenski Balkandzii — Hosted WIP Full-Stack Platform",
+    title: "Elenski Balkandzii — Full-Stack Platform",
     context:
       "Status: Live hosted WIP project. Client-server application split into dedicated Next.js frontend and ASP.NET Core Web API backend repositories, with the frontend deployed on Render.",
     solution:
@@ -128,7 +128,7 @@ export const projects = [
   },
   {
     number: "06",
-    title: "GabiCraft — Hosted WIP Full-Stack Project",
+    title: "GabiCraft — Full-Stack Project",
     context:
       "Status: Live hosted WIP project. Full-stack application organized as a single repository with separate Next.js frontend and ASP.NET Core Web API backend projects, with the frontend deployed on Render.",
     solution:
@@ -155,7 +155,7 @@ export const projects = [
   },
   {
     number: "07",
-    title: "PaladinHub 1.0 — Portfolio Project",
+    title: "PaladinHub 1.0",
     context:
       "Status: Portfolio project. Community platform for the World of Warcraft Paladin audience, built as a .NET 8 MVC application with an account system, content modules and a Talent Tree Builder.",
     solution:
@@ -191,7 +191,7 @@ export const projects = [
   },
   {
     number: "08",
-    title: "PaladinHub 2.0 — WIP Portfolio Project",
+    title: "PaladinHub 2.0",
     context:
       "Status: WIP portfolio project. Planned modernization of PaladinHub into a separated ASP.NET Core Web API backend and standalone Next.js frontend.",
     solution:
