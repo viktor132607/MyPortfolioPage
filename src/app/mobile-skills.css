@@ -130,6 +130,14 @@
   .mobile-experience-toggle.is-open .mobile-experience-chevron {
     transform: rotate(225deg) translate(-1px, -1px);
   }
+
+  #certificates .mobile-certificate-preview {
+    margin: 1.25rem -1.25rem -1.25rem;
+    overflow: hidden;
+    border-top: 1px solid rgb(var(--color-line));
+    border-bottom: 0 !important;
+    border-radius: 0 0 1.8rem 1.8rem;
+  }
 }
 
 #projects article > div:first-child > .kicker {
