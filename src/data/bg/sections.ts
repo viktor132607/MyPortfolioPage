@@ -17,7 +17,7 @@ export const sections = {
       },
       about: {
         eyebrow: "За мен",
-        title: "Software development профил с бизнес контекст",
+        title: "Моят профил",
         text:
           "Фокусът ми е върху изграждане на софтуерни решения с backend логика, APIs, бази данни и full-stack web development. Работя с C#/.NET, ASP.NET Core, Next.js и TypeScript, а опитът ми в счетоводство, одит и финансов контрол ми помага да разбирам по-добре бизнес процесите, точността на данните и изискванията за отчетност."
       },
