@@ -2,6 +2,7 @@ import { content, type Lang } from "@/data/profile";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { RepositoryMenu } from "@/components/RepositoryMenu";
 
 type PortfolioPageProps = {
   lang: Lang;
@@ -124,35 +125,14 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
           <div className="mt-10 grid gap-12">
             {t.projects.map((project) => {
               const hasLiveUrl = Boolean(project.previewUrl);
-              const hasRepositoryUrl = Boolean(project.repositoryUrl);
-              const hasBackendRepositoryUrl = Boolean(project.backendRepositoryUrl);
               const hasScreenshot = project.previewType === "screenshot" && Boolean(project.previewImage);
               const canOpenPreview = hasScreenshot && hasLiveUrl;
 
               const repositoryLinks = (
-                <>
-                  {hasRepositoryUrl ? (
-                    <a
-                      href={project.repositoryUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition hover:text-ink dark:hover:text-white"
-                    >
-                      {hasBackendRepositoryUrl ? "Open frontend repository" : "Open GitHub repository"}
-                    </a>
-                  ) : null}
-
-                  {hasBackendRepositoryUrl ? (
-                    <a
-                      href={project.backendRepositoryUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition hover:text-ink dark:hover:text-white"
-                    >
-                      Open backend repository
-                    </a>
-                  ) : null}
-                </>
+                <RepositoryMenu
+                  clientUrl={project.repositoryUrl}
+                  serverUrl={project.backendRepositoryUrl}
+                />
               );
 
               return (
