@@ -4,6 +4,7 @@ import "./globals.css";
 import "./mobile-skills.css";
 import "./project-separation.css";
 import "./mobile-background.css";
+import "./mobile-text-cards.css";
 
 export const metadata: Metadata = {
   title: "Viktor Iliev | Portfolio",
