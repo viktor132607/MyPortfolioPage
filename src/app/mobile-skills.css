@@ -1,4 +1,8 @@
 @media (max-width: 639px) {
+  #top {
+    padding-top: 1.25rem !important;
+  }
+
   #skills {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -54,9 +58,8 @@
   }
 
   #top > div.grid > div.max-w-5xl > div:first-child > div.mt-7 {
-    margin-top: 0.75rem !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    margin-top: 0.5rem !important;
+    padding: 0 !important;
     border-color: transparent !important;
     background: transparent !important;
     box-shadow: none !important;
