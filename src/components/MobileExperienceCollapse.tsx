@@ -102,6 +102,26 @@ export function MobileExperienceCollapse() {
       setupCollapse(content, title, detailNodes, "mobileProjectToggle");
     });
 
+    const educationCards = Array.from(document.querySelectorAll<HTMLElement>("#education article"));
+
+    educationCards.forEach((card) => {
+      const title = card.querySelector<HTMLElement>(":scope > h3");
+      const degree = title?.nextElementSibling as HTMLElement | null;
+
+      if (!title) return;
+
+      const anchor = degree ?? title;
+      const detailNodes = Array.from(card.children).filter(
+        (node): node is HTMLElement =>
+          node instanceof HTMLElement &&
+          node !== title &&
+          node !== degree &&
+          !node.classList.contains("kicker")
+      );
+
+      setupCollapse(card, anchor, detailNodes, "mobileEducationToggle");
+    });
+
     const certificateCards = Array.from(document.querySelectorAll<HTMLElement>("#certificates article"));
 
     certificateCards.forEach((card) => {
