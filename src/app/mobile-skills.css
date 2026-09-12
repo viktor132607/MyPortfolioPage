@@ -148,7 +148,17 @@
   }
 
   #certificates article > div:last-child {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.75rem;
     padding: 1rem !important;
+  }
+
+  #certificates article > div:last-child > .kicker,
+  #certificates article > div:last-child > h3,
+  #certificates article > div:last-child > div.mt-5.grid,
+  #certificates article > div:last-child > .mobile-certificate-preview {
+    grid-column: 1 / -1;
   }
 
   #certificates article > div:last-child > h3 {
@@ -163,13 +173,18 @@
   }
 
   #certificates article .mobile-experience-toggle {
+    grid-column: 1;
+    align-self: center;
     margin-top: 0.5rem;
   }
 
   #certificates article > div:last-child > a {
-    display: flex !important;
+    grid-column: 2;
+    justify-self: end;
+    align-self: center;
+    display: inline-flex !important;
     width: fit-content;
-    margin-top: 0.75rem !important;
+    margin-top: 0.5rem !important;
     padding: 0.4rem 0.85rem;
     font-size: 0.8rem;
   }
