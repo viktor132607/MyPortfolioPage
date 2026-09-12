@@ -81,6 +81,10 @@
     white-space: nowrap;
   }
 
+  #top > div.grid > aside > div > div:first-child > a {
+    display: none !important;
+  }
+
   #about > article.card {
     padding: 0 !important;
     border-color: transparent !important;
