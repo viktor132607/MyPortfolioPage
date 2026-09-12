@@ -77,7 +77,8 @@
     -webkit-backdrop-filter: none !important;
   }
 
-  #experience .card {
+  #experience .card,
+  #education .card {
     padding: 1.125rem;
   }
 
@@ -89,9 +90,18 @@
     margin-top: 0.5rem;
   }
 
-  #experience .card h3 {
+  #experience .card h3,
+  #education .card h3 {
     font-size: 1.2rem;
     line-height: 1.35;
+  }
+
+  #education .card > h3 {
+    margin-top: 0.75rem;
+  }
+
+  #education .card > h3 + p {
+    margin-top: 0.4rem;
   }
 
   .mobile-experience-toggle {
