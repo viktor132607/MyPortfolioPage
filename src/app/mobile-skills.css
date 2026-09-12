@@ -131,6 +131,10 @@
     transform: rotate(225deg) translate(-1px, -1px);
   }
 
+  #certificates [hidden] {
+    display: none !important;
+  }
+
   #certificates .mobile-certificate-preview {
     margin: 1.25rem -1.25rem -1.25rem;
     overflow: hidden;
@@ -142,4 +146,8 @@
 
 #projects article > div:first-child > .kicker {
   display: none;
+}
+
+#certificates .certificate-level-row {
+  display: none !important;
 }
