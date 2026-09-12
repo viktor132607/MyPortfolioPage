@@ -39,7 +39,7 @@ export const sections = {
       },
       skills: {
         eyebrow: "Умения / Технологии",
-        title: "Технологичен стек и професионални умения",
+        title: "Tech Stack",
         text:
           "Фокус върху full-stack development технологии, frontend и backend разработка, бази данни, deployment инструменти и професионални умения за работа по реални software проекти."
       },
