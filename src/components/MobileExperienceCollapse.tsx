@@ -11,7 +11,7 @@ export function MobileExperienceCollapse() {
 
     const setupCollapse = (
       content: HTMLElement,
-      title: HTMLElement,
+      anchor: HTMLElement,
       detailNodes: HTMLElement[],
       dataKey: string,
       onRender?: (isMobile: boolean, expanded: boolean) => void,
@@ -31,7 +31,7 @@ export function MobileExperienceCollapse() {
       chevron.setAttribute("aria-hidden", "true");
 
       button.append(label, chevron);
-      title.insertAdjacentElement("afterend", button);
+      anchor.insertAdjacentElement("afterend", button);
 
       const render = () => {
         const isMobile = media.matches;
@@ -90,41 +90,134 @@ export function MobileExperienceCollapse() {
       setupCollapse(content, title, detailNodes, "mobileExperienceToggle");
     });
 
+    const projectTypes = [
+      "Photography website",
+      "Accounting website",
+      "E-commerce platform",
+      "Folk community platform",
+      "Full-stack platform",
+      "Full-stack project",
+      "World of Warcraft community platform",
+      "Full-stack community platform"
+    ];
+
     const projectCards = Array.from(document.querySelectorAll<HTMLElement>("#projects article"));
 
     projectCards.forEach((card, index) => {
       const projectData = (content.en.projects[index] ?? null) as
-        | { backendRepositoryUrl?: string }
+        | {
+            repositoryUrl?: string;
+            backendRepositoryUrl?: string;
+            previewUrl?: string;
+          }
         | null;
-      const repositoryLink = card.querySelector<HTMLAnchorElement>('a[href*="github.com"]');
 
-      if (repositoryLink && projectData?.backendRepositoryUrl) {
-        const originalText = repositoryLink.textContent;
-        const backendLink = repositoryLink.cloneNode(true) as HTMLAnchorElement;
+      const cardContent = card.firstElementChild as HTMLElement | null;
+      const title = cardContent?.querySelector<HTMLElement>(":scope > h3");
+      const kicker = cardContent?.querySelector<HTMLElement>(":scope > .kicker");
 
-        repositoryLink.textContent = "Open frontend repository";
-        backendLink.href = projectData.backendRepositoryUrl;
+      if (!cardContent || !title) return;
+
+      const originalTitle = title.textContent ?? "";
+      const [cleanTitle, inlineType] = originalTitle.split(" — ");
+      const projectTypeText = inlineType || projectTypes[index] || "";
+
+      title.textContent = cleanTitle;
+
+      const projectType = document.createElement("p");
+      projectType.className = "mt-2 text-sm font-semibold text-ink dark:text-white sm:text-base";
+      projectType.textContent = projectTypeText;
+      title.insertAdjacentElement("afterend", projectType);
+
+      cleanup.push(() => {
+        title.textContent = originalTitle;
+        projectType.remove();
+      });
+
+      const githubLinks = Array.from(card.querySelectorAll<HTMLAnchorElement>('a[href*="github.com"]'));
+      const frontendLink = projectData?.repositoryUrl
+        ? githubLinks.find((link) => link.href === projectData.repositoryUrl)
+        : githubLinks[0];
+      const existingBackendLink = projectData?.backendRepositoryUrl
+        ? githubLinks.find((link) => link.href === projectData.backendRepositoryUrl)
+        : undefined;
+
+      if (frontendLink && projectData?.backendRepositoryUrl) {
+        const originalFrontendText = frontendLink.textContent;
+        frontendLink.textContent = "Open frontend repository";
+
+        let backendLink = existingBackendLink;
+        let createdBackendLink = false;
+        const originalBackendText = backendLink?.textContent ?? null;
+
+        if (!backendLink) {
+          backendLink = frontendLink.cloneNode(true) as HTMLAnchorElement;
+          backendLink.href = projectData.backendRepositoryUrl;
+          frontendLink.insertAdjacentElement("afterend", backendLink);
+          createdBackendLink = true;
+        }
+
         backendLink.textContent = "Open backend repository";
-        repositoryLink.insertAdjacentElement("afterend", backendLink);
 
         cleanup.push(() => {
-          repositoryLink.textContent = originalText;
-          backendLink.remove();
+          frontendLink.textContent = originalFrontendText;
+          if (createdBackendLink) {
+            backendLink?.remove();
+          } else if (backendLink) {
+            backendLink.textContent = originalBackendText;
+          }
+        });
+      } else if (frontendLink) {
+        const originalText = frontendLink.textContent;
+        frontendLink.textContent = "Open GitHub repository";
+        cleanup.push(() => {
+          frontendLink.textContent = originalText;
         });
       }
 
-      const content = card.firstElementChild as HTMLElement | null;
-      const title = content?.querySelector<HTMLElement>(":scope > h3");
-      const kicker = content?.querySelector<HTMLElement>(":scope > .kicker");
+      if (index === 6 && projectData?.previewUrl) {
+        const existingIframe = card.querySelector<HTMLIFrameElement>("iframe");
 
-      if (!content || !title) return;
+        if (existingIframe) {
+          const originalSrc = existingIframe.src;
+          const originalLoading = existingIframe.loading;
+          existingIframe.src = projectData.previewUrl;
+          existingIframe.loading = "eager";
 
-      const detailNodes = Array.from(content.children).filter(
+          cleanup.push(() => {
+            existingIframe.src = originalSrc;
+            existingIframe.loading = originalLoading;
+          });
+        } else {
+          const previewImage = card.querySelector<HTMLImageElement>('img[src*="paladinhub-home"]');
+          const previewContainer = previewImage?.closest("a, div") as HTMLElement | null;
+
+          if (previewContainer?.parentElement) {
+            const parent = previewContainer.parentElement;
+            const nextSibling = previewContainer.nextSibling;
+            const iframe = document.createElement("iframe");
+            iframe.src = projectData.previewUrl;
+            iframe.title = `${cleanTitle} preview`;
+            iframe.loading = "eager";
+            iframe.className = "h-[80vh] w-full bg-white";
+            parent.replaceChild(iframe, previewContainer);
+
+            cleanup.push(() => {
+              if (iframe.parentElement === parent) {
+                parent.removeChild(iframe);
+                parent.insertBefore(previewContainer, nextSibling);
+              }
+            });
+          }
+        }
+      }
+
+      const detailNodes = Array.from(cardContent.children).filter(
         (node): node is HTMLElement =>
-          node instanceof HTMLElement && node !== title && node !== kicker
+          node instanceof HTMLElement && node !== title && node !== projectType && node !== kicker
       );
 
-      setupCollapse(content, title, detailNodes, "mobileProjectToggle");
+      setupCollapse(cardContent, projectType, detailNodes, "mobileProjectToggle");
     });
 
     const educationCards = Array.from(document.querySelectorAll<HTMLElement>("#education article"));
