@@ -79,7 +79,7 @@ export const sections = {
       },
       contact: {
         eyebrow: "Contact",
-        title: "If the idea matters, let’s talk.",
+        title: "Contact",
         text: "",
         email: "Email",
         phone: "Phone"
