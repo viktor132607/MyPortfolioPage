@@ -132,11 +132,25 @@ export function MobileExperienceCollapse() {
       const preview = card.firstElementChild as HTMLElement | null;
       const content = card.lastElementChild as HTMLElement | null;
       const title = content?.querySelector<HTMLElement>(":scope > h3");
+      const provider = content?.querySelector<HTMLElement>(":scope > .kicker");
+      const metadata = content?.querySelector<HTMLElement>(":scope > div.mt-5.grid");
+      const openLink = content?.querySelector<HTMLElement>(":scope > a");
 
-      if (!preview || !content || !title) return;
+      if (!preview || !content || !title || !metadata) return;
 
-      const detailNodes = Array.from(content.children).filter(
-        (node): node is HTMLElement => node instanceof HTMLElement && node !== title
+      const rows = Array.from(metadata.children).filter(
+        (node): node is HTMLElement => node instanceof HTMLElement
+      );
+      const courseDateRow = rows[0];
+      const issueDateRow = rows[1];
+      const areaRow = rows[2];
+      const levelRow = rows[3];
+
+      levelRow?.classList.add("certificate-level-row");
+      areaRow?.classList.add("certificate-area-row");
+
+      const detailNodes = [provider, courseDateRow, issueDateRow, openLink].filter(
+        (node): node is HTMLElement => node instanceof HTMLElement
       );
 
       const restorePreview = () => {
@@ -149,7 +163,7 @@ export function MobileExperienceCollapse() {
 
       setupCollapse(
         content,
-        title,
+        metadata,
         detailNodes,
         "mobileCertificateToggle",
         (isMobile, expanded) => {
