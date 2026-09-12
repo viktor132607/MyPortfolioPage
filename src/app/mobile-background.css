@@ -1,0 +1,21 @@
+@media (max-width: 639px) {
+  html:not(.dark) body {
+    background-color: rgb(244 250 255) !important;
+    background-image: url("/light-theme-bg.png") !important;
+    background-position: center top !important;
+    background-size: 100vw auto !important;
+    background-repeat: repeat-y !important;
+    background-attachment: scroll !important;
+  }
+
+  html.dark body {
+    background-color: rgb(2 6 23) !important;
+    background-image:
+      linear-gradient(180deg, rgba(2, 6, 23, 0.16), rgba(2, 6, 23, 0.42)),
+      url("/circuit-board-bg.png") !important;
+    background-position: center top, center top !important;
+    background-size: 100% 100%, 100vw auto !important;
+    background-repeat: no-repeat, repeat-y !important;
+    background-attachment: scroll, scroll !important;
+  }
+}
