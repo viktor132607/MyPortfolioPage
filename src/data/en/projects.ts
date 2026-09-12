@@ -189,9 +189,8 @@ export const projects = [
       "Docker",
       "Render"
     ],
-    previewType: "screenshot",
+    previewType: "iframe",
     previewUrl: "https://paladinhub-api-d4ta.onrender.com",
-    previewImage: "/projects/paladinhub-home.png",
     repositoryUrl: "https://github.com/viktor132607/PaladinHub",
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
