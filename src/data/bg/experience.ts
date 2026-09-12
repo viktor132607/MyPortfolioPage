@@ -2,7 +2,7 @@ export const experience = [
       {
         period: "2025 - до момента",
         title: "Freelance Full Stack Developer",
-        company: "Self-employed / Personal Projects",
+        company: "",
         text:
           "Разработвам и поддържам web проекти с фокус върху чисти frontend интерфейси, backend логика, database структура, multilingual съдържание и deployment-ready изпълнение.",
         bullets: [
