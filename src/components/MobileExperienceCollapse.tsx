@@ -134,7 +134,6 @@ export function MobileExperienceCollapse() {
       const title = content?.querySelector<HTMLElement>(":scope > h3");
       const provider = content?.querySelector<HTMLElement>(":scope > .kicker");
       const metadata = content?.querySelector<HTMLElement>(":scope > div.mt-5.grid");
-      const openLink = content?.querySelector<HTMLElement>(":scope > a");
 
       if (!preview || !content || !title || !metadata) return;
 
@@ -149,7 +148,7 @@ export function MobileExperienceCollapse() {
       levelRow?.classList.add("certificate-level-row");
       areaRow?.classList.add("certificate-area-row");
 
-      const detailNodes = [provider, courseDateRow, issueDateRow, openLink].filter(
+      const detailNodes = [provider, courseDateRow, issueDateRow].filter(
         (node): node is HTMLElement => node instanceof HTMLElement
       );
 
