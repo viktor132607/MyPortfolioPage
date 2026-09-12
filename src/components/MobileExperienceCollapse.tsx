@@ -102,6 +102,25 @@ export function MobileExperienceCollapse() {
       setupCollapse(content, title, detailNodes, "mobileProjectToggle");
     });
 
+    const certificateCards = Array.from(document.querySelectorAll<HTMLElement>("#certificates article"));
+
+    certificateCards.forEach((card) => {
+      const preview = card.firstElementChild as HTMLElement | null;
+      const content = card.lastElementChild as HTMLElement | null;
+      const title = content?.querySelector<HTMLElement>(":scope > h3");
+
+      if (!preview || !content || !title) return;
+
+      const detailNodes = [
+        preview,
+        ...Array.from(content.children).filter(
+          (node): node is HTMLElement => node instanceof HTMLElement && node !== title
+        )
+      ];
+
+      setupCollapse(content, title, detailNodes, "mobileCertificateToggle");
+    });
+
     return () => cleanup.forEach((fn) => fn());
   }, []);
 
