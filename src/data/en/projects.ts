@@ -73,7 +73,7 @@ export const projects = [
     ],
     stack: ["ASP.NET Core Web API", "C#", ".NET", "Next.js", "React", "TypeScript", "Redux Toolkit", "TailwindCSS", "PostgreSQL", "Entity Framework Core", "JWT", "REST API", "Docker", "Render", "xUnit"],
     previewType: "iframe",
-    previewUrl: "https://higiatrade-client.onrender.com/",
+    previewUrl: "https://higiatrade.com/",
     repositoryUrl: "https://github.com/viktor132607/HigiaTrade.Client",
     backendRepositoryUrl: "https://github.com/viktor132607/HigiaTrade.Server",
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
