@@ -99,7 +99,7 @@ export const projects = [
     ],
     stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "ASP.NET Core Web API", "C#", ".NET", "PostgreSQL", "Entity Framework Core", "REST API", "Docker", "Render"],
     previewType: "iframe",
-    previewUrl: "https://orisia-client.onrender.com/",
+    previewUrl: "https://orisia-client-zgwt.onrender.com/",
     repositoryUrl: "https://github.com/viktor132607/Orisia.Client",
     backendRepositoryUrl: "https://github.com/viktor132607/Orisia.Server",
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
