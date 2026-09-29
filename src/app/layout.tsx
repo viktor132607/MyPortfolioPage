@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   title: "Viktor Iliev | Portfolio",
   description: "Personal portfolio built with Next.js, TypeScript and TailwindCSS.",
   icons: {
-    icon: "/favicon.svg"
+    icon: [{ url: "/favicon.svg?v=2", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg?v=2"
   }
 };
 
