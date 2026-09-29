@@ -134,33 +134,6 @@ export const projects = [
   },
   {
     number: "06",
-    title: "GabiCraft — Full-Stack Project",
-    context:
-      "Status: Live hosted WIP project. Full-stack application organized as a single repository with separate Next.js frontend and ASP.NET Core Web API backend projects, with the frontend deployed on Render.",
-    solution:
-      "Built with a responsive Next.js and TypeScript client plus a .NET 10 ASP.NET Core Web API server, Entity Framework Core data layer and PostgreSQL development environment. The frontend includes reusable navigation, footer, core pages and a clean responsive UI and is deployed as a static Render site.",
-    features: [
-      "Live frontend hosting on Render",
-      "Next.js frontend project",
-      "Responsive desktop, tablet and mobile layout",
-      "Reusable navbar, footer and core page structure",
-      "TypeScript App Router structure",
-      "Reusable Axios API client",
-      "ASP.NET Core Web API backend",
-      ".NET 10 solution structure",
-      "Separated Domain and Data projects",
-      "Entity Framework Core",
-      "PostgreSQL configuration",
-      "Scalar/OpenAPI API documentation",
-      "Docker Compose PostgreSQL environment"
-    ],
-    stack: ["Next.js", "React", "TypeScript", "Axios", "Responsive UI", "ASP.NET Core Web API", "C#", ".NET 10", "PostgreSQL", "Entity Framework Core", "Scalar", "Docker", "Render"],
-    previewType: "iframe",
-    previewUrl: "https://gabicraft.onrender.com/",
-    repositoryUrl: "https://github.com/viktor132607/GabiCraft"
-  },
-  {
-    number: "07",
     title: "PaladinHub 1.0",
     context:
       "Status: Portfolio project. Community platform for the World of Warcraft Paladin audience, built as a .NET 8 MVC application with an account system, content modules and a Talent Tree Builder.",
@@ -195,7 +168,7 @@ export const projects = [
     sleepNotice: "Free Render hosting may take up to 60 seconds to start."
   },
   {
-    number: "08",
+    number: "07",
     title: "PaladinHub 2.0",
     context:
       "Status: WIP portfolio project. Planned modernization of PaladinHub into a separated ASP.NET Core Web API backend and standalone Next.js frontend.",
