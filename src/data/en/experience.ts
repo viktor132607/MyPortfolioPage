@@ -37,5 +37,17 @@ export const experience = [
           "Used Excel at an advanced level for data processing, checks, analysis, and support of audit work."
         ],
         stack: []
+      },
+      {
+        period: "March 2022 – May 2022",
+        title: "Paid Accounting Intern",
+        company: "Fantastic Services EOOD",
+        text: "Completed a paid internship in operational accounting, gaining practical experience in day-to-day accounting activities, processing financial documents, and supporting routine accounting operations.",
+        bullets: [
+          "Supported daily operational accounting activities.",
+          "Assisted with processing and organizing financial documentation.",
+          "Gained practical experience with routine accounting procedures."
+        ],
+        stack: []
       }
     ] as const;
