@@ -89,7 +89,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                       ) : item.company.includes("KPMG") ? (
                         <img src="/KPMG_blue_logo.svg.webp" alt="KPMG logo" loading="lazy" className="h-auto w-[138px] max-h-[82px] object-contain" />
                       ) : (
-                        <img src="/freelancer-logo.png" alt="Freelance Full-Stack Developer logo" loading="lazy" className="h-[94px] w-[94px] object-contain" />
+                        <img src="/freelancer-logo.png" alt="Freelance Full-Stack Developer logo" loading="lazy" className="h-[112px] w-[192px] max-w-none scale-[1.65] object-contain" />
                       )}
                     </div>
                   </div>
