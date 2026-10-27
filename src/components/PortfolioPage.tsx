@@ -82,7 +82,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                 <div className="grid gap-5 lg:grid-cols-[0.3fr_0.7fr]">
                   <div>
                     <p className="kicker">{item.period}</p>
-                    <p className="mt-4 text-sm text-muted dark:text-white">{item.company}</p>
+                    
                     <div className="mt-5 flex h-28 w-48 items-center justify-center">
                       {item.company.includes("Coca-Cola") ? (
                         <img src="/Logo_Coca-Cola_Hbc.svg.webp" alt="Coca-Cola HBC logo" loading="lazy" className="h-auto w-[172px] max-h-[76px] object-contain" />
@@ -98,7 +98,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
 
                   <div>
                     <h3 className="text-xl font-semibold tracking-[-0.03em] text-ink dark:text-white sm:text-2xl">
-                      {item.title}
+                      {item.title}{item.company ? ` — ${item.company}` : ""}
                     </h3>
                     <p className="mt-4 text-base leading-8 text-muted dark:text-white">{item.text}</p>
 
