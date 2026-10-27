@@ -88,6 +88,8 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                         <img src="/Logo_Coca-Cola_Hbc.svg.webp" alt="Coca-Cola HBC logo" loading="lazy" className="h-auto w-[172px] max-h-[76px] object-contain" />
                       ) : item.company.includes("KPMG") ? (
                         <img src="/KPMG_blue_logo.svg.webp" alt="KPMG logo" loading="lazy" className="h-auto w-[138px] max-h-[82px] object-contain" />
+                      ) : item.company.includes("Fantastic Services") ? (
+                        <img src="/2048_078780e3e9eaa4dafec23ca496136129.png" alt="Fantastic Services logo" loading="lazy" className="h-auto w-[172px] max-h-[96px] object-contain" />
                       ) : (
                         <img src="/freelancer-logo.png" alt="Freelance Full-Stack Developer logo" loading="lazy" className="h-[112px] w-[192px] max-w-none scale-[1.65] object-contain" />
                       )}
