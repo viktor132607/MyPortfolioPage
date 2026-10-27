@@ -83,7 +83,7 @@ export function PortfolioPage({ lang }: PortfolioPageProps) {
                   <div>
                     <p className="kicker">{item.period}</p>
                     <p className="mt-4 text-sm text-muted dark:text-white">{item.company}</p>
-                    <div className="mt-5 flex h-28 w-48 items-center justify-center overflow-hidden rounded-xl border border-line bg-white/90 dark:border-cyan-900/50">
+                    <div className="mt-5 flex h-28 w-48 items-center justify-center">
                       {item.company.includes("Coca-Cola") ? (
                         <img src="/Logo_Coca-Cola_Hbc.svg.webp" alt="Coca-Cola HBC logo" loading="lazy" className="h-auto w-[172px] max-h-[76px] object-contain" />
                       ) : item.company.includes("KPMG") ? (
